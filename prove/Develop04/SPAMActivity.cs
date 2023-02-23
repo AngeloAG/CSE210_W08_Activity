@@ -23,15 +23,19 @@ public class SPAMActivity
 {
   protected String _spamMessage;
   protected int _spamDurationInSeconds;
-  protected SPAMActivity(int duration, String message)
+  protected SPAMActivity(String message)
   {
     _spamMessage = message;
-    _spamDurationInSeconds = duration;
   }
 
 
-  protected String SpamMessageToString()
+  protected int SpamInitializeActivity()
   {
-    return $"{_spamMessage}";
+    /*Sets the duration in seconds for the activity and returns it*/
+    Console.WriteLine(_spamMessage);
+    Console.Write("How Long, in seconds, would you like for your session? ");
+    int spamDuration = int.Parse(Console.ReadLine());
+    _spamDurationInSeconds = spamDuration;
+    return spamDuration;
   }
 }
