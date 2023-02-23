@@ -24,7 +24,47 @@ class Program
 {
   static void Main(string[] args)
   {
-    Console.WriteLine("Hello Develop04 World!");
+    Console.WriteLine("Welcome to the mindfulness activities!");
+    SPAMMenu spamMenu = new SPAMMenu();
+    bool spamKeepRunning = true;
+    do
+    {
+      Console.Clear();
+      spamMenu.SPAMmenuSelection();
+      String spamUserChoice = spamMenu.SPAMselection();
+      switch (spamUserChoice)
+      {
+        case "1":
+          //Breathing activity
+          break;
+        case "2":
+          // Reflecting Activity
+          break;
+        case "3":
+          // Listing Activity
+          break;
+        case "4":
+          Console.Clear();
+          SpamPrint("Thank you for using this program.");
+          spamKeepRunning = false;
+          break;
+        default:
+          SpamPrint("Invalid option. Please enter a valid option of the menu.");
+          SpamReadConsole();
+          break;
+      }
+    } while (spamKeepRunning);
+    SpamCloseProgram();
+  }
+
+  static String SpamReadConsole()
+  {
+    return Console.ReadLine();
+  }
+
+  static void SpamPrint(String prompt)
+  {
+    Console.WriteLine(prompt);
   }
 
   static void SpamCloseProgram()
