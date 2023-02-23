@@ -6,7 +6,7 @@ Authors:
 	Alvaro Nunez
 	Logan Clark
 
-Date:
+Date: 2/23/22
 
 Description:
 Responsibilities: Return selected option
@@ -18,12 +18,27 @@ list of options
 Behaviors:
 Return user selected option
 */
-
-public class SPAMMenu : SPAMActivity
+using System;
+public class SPAMMenu 
 {
 
   public SPAMMenu()
   {
+    
+  }
+  
+  public void SPAMmenuSelection()
+  {
+    Console.WriteLine("Welcome to the Mindfulness Program. Please choose and activity to continue.");
+    Console.WriteLine("1). Breathing Activity");
+    Console.WriteLine("2). Reflection Activity");
+    Console.WriteLine("3). Listing Activity");
+  }
 
+  
+  public string SPAMselection()
+  {
+    Console.Write("Please enter the numberical value of the preferred activity: ");
+    return Console.ReadLine();  
   }
 }
