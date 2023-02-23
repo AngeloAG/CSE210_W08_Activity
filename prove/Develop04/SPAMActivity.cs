@@ -21,9 +21,17 @@ stores child class data.
 
 public class SPAMActivity
 {
-
-  protected SPAMActivity()
+  protected String _spamMessage;
+  protected int _spamDurationInSeconds;
+  protected SPAMActivity(int duration, String message)
   {
+    _spamMessage = message;
+    _spamDurationInSeconds = duration;
+  }
 
+
+  protected String SpamMessageToString()
+  {
+    return $"{_spamMessage}";
   }
 }
