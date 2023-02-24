@@ -42,6 +42,9 @@ class Program
           break;
         case "3":
           // Listing Activity
+          Console.Clear();
+          SPAMListingActivity listingActivity = new SPAMListingActivity();
+          listingActivity._SPAMStartListingActivity();
           break;
         case "4":
           Console.Clear();
