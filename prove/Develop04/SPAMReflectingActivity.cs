@@ -105,8 +105,6 @@ public class SPAMReflectingActivity : SPAMActivity
 
       else
       {
-        Console.WriteLine($"{prompts2}");
-
         foreach (string s in spinnerThing)
         {
           Console.Write(s);
@@ -114,7 +112,9 @@ public class SPAMReflectingActivity : SPAMActivity
           Console.Write("\b \b");
         }
 
+        Console.WriteLine($"{prompts2}");
         Console.Write("");
+        
       }
     }
   }
