@@ -18,7 +18,7 @@ Behaviors:
 creates specific prompts that are meant to encourage the user to reflect on certain things
 */
 
-System.Random rnd = new System.Random();
+
 public class SPAMReflectingActivity : SPAMActivity
 {
   private List<string> spinnerThing = new List<string>()
@@ -33,7 +33,7 @@ public class SPAMReflectingActivity : SPAMActivity
     "\\"
   };
   private List<string> prompts = new List<string>()
-  { 
+  {
     "Think of a time when you stood up for someone else.",
     "Think of a time when you did something really difficult.",
     "Think of a time when you helped someone in need.",
@@ -55,7 +55,7 @@ public class SPAMReflectingActivity : SPAMActivity
 
   public SPAMReflectingActivity() : base("This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life")
   {
-    
+
   }
 
   public string random_prompts()
@@ -74,9 +74,8 @@ public class SPAMReflectingActivity : SPAMActivity
 
   public void startReflecting_activity()
   {
+    System.Random rnd = new System.Random();
     Console.WriteLine("Welcome to the Reflecting Activity!");
-    Console.Write("How long, in seconds, would you like your session to be?");
-    string _UserAnswer = Console.ReadLine();
     int _UserTime = base.SpamInitializeActivity();
 
     DateTime startTime = DateTime.Now;
@@ -94,7 +93,7 @@ public class SPAMReflectingActivity : SPAMActivity
 
     Console.WriteLine($"{prompts2}");
 
-    while(_UserAsk)
+    while (_UserAsk)
     {
       DateTime currentTime = DateTime.Now;
       if (currentTime < futureTime)
@@ -114,7 +113,7 @@ public class SPAMReflectingActivity : SPAMActivity
 
         Console.WriteLine($"{prompts2}");
         Console.Write("");
-        
+
       }
     }
   }
