@@ -21,7 +21,18 @@ creates specific prompts that are meant to encourage the user to reflect on cert
 System.Random rnd = new System.Random();
 public class SPAMReflectingActivity : SPAMActivity
 {
-  List<string> prompts = new List<string>()
+  private List<string> spinnerThing = new List<string>()
+  {
+    "|",
+    "/",
+    "-",
+    "\\ ",
+    "|",
+    "/",
+    "-",
+    "\\"
+  };
+  private List<string> prompts = new List<string>()
   { 
     "Think of a time when you stood up for someone else.",
     "Think of a time when you did something really difficult.",
@@ -29,7 +40,7 @@ public class SPAMReflectingActivity : SPAMActivity
     "Think of a time when you did something truly selfless."
   };
 
-  List<string> prompts2 = new List<string>()
+  private List<string> prompts2 = new List<string>()
   {
     "Why was this experience meaningful to you?",
     "Have you ever done anything like this before?",
@@ -65,15 +76,46 @@ public class SPAMReflectingActivity : SPAMActivity
   {
     Console.WriteLine("Welcome to the Reflecting Activity!");
     Console.Write("How long, in seconds, would you like your session to be?");
-    int _userTime = base.SpamInitializeActivity();
+    string _UserAnswer = Console.ReadLine();
+    int _UserTime = base.SpamInitializeActivity();
+
     DateTime startTime = DateTime.Now;
-    DateTime futureTime = startTime.AddSeconds(_userTime);
-    bool _userTime = true
-    while _userwhile
+    DateTime futureTime = startTime.AddSeconds(_UserTime);
 
-    Console.WriteLine(prompts);
+    bool _UserAsk = true;
+    Console.WriteLine($"{prompts}");
 
+    foreach (string s in spinnerThing)
+    {
+      Console.Write(s);
+      Thread.Sleep(500);
+      Console.Write("\b \b");
+    }
 
-    Console.WriteLine(prompts2);
+    Console.WriteLine($"{prompts2}");
+
+    while(_UserAsk)
+    {
+      DateTime currentTime = DateTime.Now;
+      if (currentTime < futureTime)
+      {
+        Console.WriteLine("Time ended");
+        _UserAsk = false;
+      }
+
+      else
+      {
+        Console.WriteLine($"{prompts2}");
+
+        foreach (string s in spinnerThing)
+        {
+          Console.Write(s);
+          Thread.Sleep(500);
+          Console.Write("\b \b");
+        }
+
+        Console.Write("");
+      }
+    }
   }
 }
