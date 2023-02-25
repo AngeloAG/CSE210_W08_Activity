@@ -92,6 +92,7 @@ public class SPAMReflectingActivity : SPAMActivity
     }
 
     Console.WriteLine($"{prompts2}");
+    Console.Write("");
 
     while (_UserAsk)
     {
