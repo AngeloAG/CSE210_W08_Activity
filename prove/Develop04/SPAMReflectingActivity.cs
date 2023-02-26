@@ -97,7 +97,7 @@ public class SPAMReflectingActivity : SPAMActivity
     while (_UserAsk)
     {
       DateTime currentTime = DateTime.Now;
-      if (currentTime < futureTime)
+      if (currentTime > futureTime)
       {
         Console.WriteLine("Time ended");
         _UserAsk = false;
