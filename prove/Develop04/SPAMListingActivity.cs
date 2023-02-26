@@ -72,6 +72,7 @@ public class SPAMListingActivity : SPAMActivity
         _SPAMKeepAsking = false;
       }
     }
+    Console.WriteLine($"You entered {_SPAMStoredInputList.Count} items!");
     base.SpamActivityFinishMessage();
   }
 }
