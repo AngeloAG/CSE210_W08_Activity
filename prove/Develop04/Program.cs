@@ -26,28 +26,38 @@ class Program
   {
     Console.WriteLine("Welcome to the mindfulness activities!");
     SPAMMenu spamMenu = new SPAMMenu();
+    int spamBreathingActCount = 0;
+    int spamReflectingActCount = 0;
+    int spamListingActCount = 0;
     bool spamKeepRunning = true;
     do
     {
       Console.Clear();
       spamMenu.SPAMmenuSelection();
+      SpamPrint($"");
+      SpamPrint($"Completed Breathing Activities {spamBreathingActCount}");
+      SpamPrint($"Completed Reflecting Activities {spamReflectingActCount}");
+      SpamPrint($"Completed Listing Activities {spamListingActCount}");
       String spamUserChoice = spamMenu.SPAMselection();
       switch (spamUserChoice)
       {
         case "1":
           //Breathing activity
+          spamBreathingActCount++;
           Console.Clear();
           SPAMBreathingActivity spamBreathingActivity = new SPAMBreathingActivity();
           spamBreathingActivity.SPAMStartBreathingActivity();
           break;
         case "2":
           // Reflecting Activity
+          spamReflectingActCount++;
           Console.Clear();
           SPAMReflectingActivity spamReflectingActivity = new SPAMReflectingActivity();
           spamReflectingActivity.startReflecting_activity();
           break;
         case "3":
           // Listing Activity
+          spamListingActCount++;
           Console.Clear();
           SPAMListingActivity spamListingActivity = new SPAMListingActivity();
           spamListingActivity._SPAMStartListingActivity();
