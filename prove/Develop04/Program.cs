@@ -36,6 +36,9 @@ class Program
       {
         case "1":
           //Breathing activity
+          Console.Clear();
+          SPAMBreathingActivity breathingactivity = new SPAMBreathingActivity();
+          breathingactivity.SPAMStartBreathingActivity();
           break;
         case "2":
           // Reflecting Activity
