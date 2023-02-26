@@ -36,15 +36,21 @@ class Program
       {
         case "1":
           //Breathing activity
+          Console.Clear();
+          SPAMBreathingActivity spamBreathingActivity = new SPAMBreathingActivity();
+          spamBreathingActivity.SPAMStartBreathingActivity();
           break;
         case "2":
           // Reflecting Activity
+          Console.Clear();
+          SPAMReflectingActivity spamReflectingActivity = new SPAMReflectingActivity();
+          spamReflectingActivity.startReflecting_activity();
           break;
         case "3":
           // Listing Activity
           Console.Clear();
-          SPAMListingActivity listingActivity = new SPAMListingActivity();
-          listingActivity._SPAMStartListingActivity();
+          SPAMListingActivity spamListingActivity = new SPAMListingActivity();
+          spamListingActivity._SPAMStartListingActivity();
           break;
         case "4":
           Console.Clear();
