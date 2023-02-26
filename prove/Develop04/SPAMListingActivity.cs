@@ -33,10 +33,12 @@ public class SPAMListingActivity : SPAMActivity
     "Who are some of your personal heroes?"
   };
 
-  private List<string> _SPAMStoredInputList = new List<string>{};
+  private List<string> _SPAMStoredInputList = new List<string> { };
 
-  public string SPAMRandPrompt {
-    get {
+  public string SPAMRandPrompt
+  {
+    get
+    {
       var rand = new Random();
       int max = _SPAMPromptList.Count();
       int min = 0;
@@ -45,7 +47,8 @@ public class SPAMListingActivity : SPAMActivity
     }
   }
 
-  public void _SPAMStartListingActivity(){
+  public void _SPAMStartListingActivity()
+  {
     Console.WriteLine("Welcome to the listing activity.");
     int _SPAMUserTime = base.SpamInitializeActivity();
 
@@ -55,7 +58,8 @@ public class SPAMListingActivity : SPAMActivity
     bool _SPAMKeepAsking = true;
     Console.WriteLine($"{SPAMRandPrompt}");
 
-    while(_SPAMKeepAsking){
+    while (_SPAMKeepAsking)
+    {
 
       Console.Write("");
       string _SPAMUserEntry = Console.ReadLine();
@@ -63,7 +67,7 @@ public class SPAMListingActivity : SPAMActivity
       _SPAMStoredInputList.Add(_SPAMUserEntry);
 
       DateTime currentTime = DateTime.Now;
-      if (currentTime < futureTime)
+      if (currentTime > futureTime)
       {
         _SPAMKeepAsking = false;
       }
