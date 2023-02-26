@@ -117,5 +117,6 @@ public class SPAMReflectingActivity : SPAMActivity
 
       }
     }
+    base.SpamActivityFinishMessage();
   }
 }

@@ -38,4 +38,20 @@ public class SPAMActivity
     _spamDurationInSeconds = spamDuration;
     return spamDuration;
   }
+
+  protected void SpamActivityFinishMessage()
+  {
+    Console.WriteLine("Well Done!!");
+    for (int i = 0; i < 5; i++)
+    {
+      Console.Write("-");
+      Thread.Sleep(500);
+      Console.Write("\b \b");
+      Console.Write("/");
+      Thread.Sleep(500);
+      Console.Write("\b \b");
+      Console.Write("\\");
+      Console.Write("\b \b");
+    }
+  }
 }

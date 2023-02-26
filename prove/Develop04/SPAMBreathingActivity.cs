@@ -37,12 +37,12 @@ public class SPAMBreathingActivity : SPAMActivity
 
     // sets two datetime variables for the start and ending time.
     DateTime SPAMStartTime = DateTime.Now;
-    DateTime SPAMFutureTime = SPAMStartTime.AddSeconds(SPAMDuration+10);
+    DateTime SPAMFutureTime = SPAMStartTime.AddSeconds(SPAMDuration + 10);
     DateTime SPAMCurrentTime = DateTime.Now;
-    
+
     //allows the user to prepare for the activity
     Console.WriteLine("Beginning, get relaxed and wait for the prompt");
-    Thread.Sleep(10000); 
+    Thread.Sleep(10000);
 
     while (SPAMCurrentTime < SPAMFutureTime)
     {
@@ -50,7 +50,7 @@ public class SPAMBreathingActivity : SPAMActivity
       Console.WriteLine("Breathe in through the nose and hold your breath.");
       Thread.Sleep(3000);
       // a loop that counts down how much time they have left to hold their breath
-      for (int i = 9; i > 0; i --)
+      for (int i = 9; i > 0; i--)
       {
         Console.Write(i);
         Thread.Sleep(1000);
@@ -62,5 +62,6 @@ public class SPAMBreathingActivity : SPAMActivity
       Console.Clear();
     }
     Console.WriteLine("Breathing activity finished.");
+    base.SpamActivityFinishMessage();
   }
 }

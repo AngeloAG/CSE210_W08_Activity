@@ -72,5 +72,6 @@ public class SPAMListingActivity : SPAMActivity
         _SPAMKeepAsking = false;
       }
     }
+    base.SpamActivityFinishMessage();
   }
 }
