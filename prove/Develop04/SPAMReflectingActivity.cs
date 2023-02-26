@@ -82,7 +82,7 @@ public class SPAMReflectingActivity : SPAMActivity
     DateTime futureTime = startTime.AddSeconds(_UserTime);
 
     bool _UserAsk = true;
-    Console.WriteLine($"{prompts}");
+    Console.WriteLine($"{random_prompts()}");
 
     foreach (string s in spinnerThing)
     {
@@ -91,7 +91,7 @@ public class SPAMReflectingActivity : SPAMActivity
       Console.Write("\b \b");
     }
 
-    Console.WriteLine($"{prompts2}");
+    Console.WriteLine($"{random_prompts2()}");
     Console.Write("");
 
     while (_UserAsk)
@@ -112,7 +112,7 @@ public class SPAMReflectingActivity : SPAMActivity
           Console.Write("\b \b");
         }
 
-        Console.WriteLine($"{prompts2}");
+        Console.WriteLine($"{random_prompts2()}");
         Console.Write("");
 
       }
